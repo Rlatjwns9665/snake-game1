@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서준이의 지렁이 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui">
+            <div id="score">점수: 0</div>
+            <div id="level">레벨: 1</div>
+        </div>
+        <div id="game-over" class="overlay hidden">
+            <h1>게임 오버!</h1>
+            <p>최종 점수: <span id="final-score">0</span></p>
+            <button id="restart-button">다시 시작</button>
+        </div>
+        <div id="game-start" class="overlay">
+            <h1>지렁이 게임</h1>
+            <p>방향키로 지렁이를 움직이며 먹이를 먹으세요!</p>
+            <p>벽이나 자기 몸에 부딪히면 게임이 끝납니다.</p>
+            <button id="start-button">게임 시작</button>
+        </div>
+        <div id="countdown" class="overlay hidden">
+            <h1 id="countdown-number">3</h1>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

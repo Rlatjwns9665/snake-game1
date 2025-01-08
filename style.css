@@ -1,0 +1,81 @@
+/* 전체 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0d1117, #1e2228);
+    color: white;
+}
+
+/* 게임 컨테이너 스타일 */
+.game-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background: #000;
+    border: 15px solid #4caf50;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #4caf50;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg, #222 0, #222 20px, #333 20px, #333 40px);
+}
+
+#ui {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 3px solid #4caf50;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #4caf50;
+}
+
+.hidden {
+    display: none;
+}
+
+#game-over button, #start-button {
+    background: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px #388e3c;
+}
+
+#game-over button:active, #start-button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
